@@ -6,15 +6,14 @@ plugins {
     `maven-publish`
 }
 
-//afterEvaluate {
-//    publishing {
-//        publications {
-//            create<MavenPublication>("maven") {
-//                from (components["proto"])
-//                groupId = "com.doapp.proto"
-//                artifactId = "proto"
-//                version = "1.0"
-//            }
-//        }
-//    }
-//}
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("maven") {
+                groupId = "com.doapp.proto"
+                artifactId = "proto"
+                version = "1.0"
+            }
+        }
+    }
+}
